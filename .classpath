@@ -8,6 +8,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/mysql-connector-java-8.0.12/mysql-connector-java-8.0.12.jar"/>
-	<classpathentry kind="lib" path="D:/SearchClass-master/SearchClass-master/WebContent/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/SearchClass/SearchClass/WebContent/WEB-INF/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

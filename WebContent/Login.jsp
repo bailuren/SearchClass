@@ -29,9 +29,8 @@
 <div class="bottom">©2018 宁波大学 <a href="javascript:;" target="_blank">关于</a> <span>学生选课系统</span></div>
 <div class="screenbg">
     <ul>
-        <li><a href="javascript:;"><img src="images/0.jpg"></a></li>
-        <li><a href="javascript:;"><img src="images/1.jpg"></a></li>
-        <li><a href="javascript:;"><img src="images/2.jpg"></a></li>
+        <li><a href="javascript:;"><img src="images/background.jpg"></a></li>
+        <li><a href="javascript:;"><img src="images/inde.jpg"></a></li>
     </ul>
 </div>
 </body>
