@@ -69,7 +69,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <span>所属院系</span>
                         <span> 
                             <select name = "Sdept" id="SD">
-                            	<option>请选择学院</option>
+                            	<option value = "<%=user.getSdept() %>" ><%=user.getSdept() %>(修改前)</option>
                             </select>
                         </span>
                     </li>
@@ -77,7 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <span>所属专业</span>
                         <span>
                             <select name = "Szhuanye" id="SZ">
-                            	<option>请选择专业</option>
+                            	<option value = "<%=user.getSzhuanye() %>"><%=user.getSzhuanye() %>(修改前)</option>
                             </select>
                         </span>
                     </li>

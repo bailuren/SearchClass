@@ -33,11 +33,11 @@ public class StudentUpdateActionServlet extends HttpServlet {
 	    PrintWriter Out =response.getWriter();
         request.setCharacterEncoding("UTF-8");
         StudentBean user=new StudentBean();
-        String sex = new String(request.getParameter("Ssex").getBytes("ISO-8859-1"),"utf-8");
-        String name = new String(request.getParameter("Sname").getBytes("ISO-8859-1"),"utf-8");
-        String psw = new String(request.getParameter("Spsw").getBytes("ISO-8859-1"),"utf-8");
-        String num = new String(request.getParameter("Sno").getBytes("ISO-8859-1"),"utf-8");
-        String depart = new String(request.getParameter("Sdept").getBytes("ISO-8859-1"),"utf-8");
+        String sex = request.getParameter("Ssex");
+        String name = request.getParameter("Sname");
+        String psw = request.getParameter("Spsw");
+        String num = request.getParameter("Sno");
+        String depart = request.getParameter("Sdept");
         int id = Integer.parseInt(request.getParameter("Sid"));
         user.setSname(name);
         user.setSpsw(psw);

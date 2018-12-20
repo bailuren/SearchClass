@@ -11,4 +11,5 @@ encoding//src/Servlet=GBK
 encoding//src/Servlet/PageServlet.java=UTF-8
 encoding//src/Servlet/ShowStudentServlet.java=GBK
 encoding//src/Servlet/StudentLoginServlet.java=GBK
+encoding//src/Servlet/StudentUpdateActionServlet.java=UTF-8
 encoding/<project>=UTF-8

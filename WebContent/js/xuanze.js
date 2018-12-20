@@ -13,20 +13,24 @@ var zhuanye=[
 	["音乐学系","音乐教育部","音乐表演系","美育中心","音乐研究所"],
 	["数学系","高等数学教学部","物理系","大学物理教学部"],
 	["高分子科学与工程系","化学系","应用化学系"],
-	["通信工程系","电子信息科学与技术系","计算机科学与技术西系","电气工程与自动化系"],
+	["通信工程系","电子信息科学与技术系","计算机科学与技术系","电气工程与自动化系"],
 	["力学与工程科学系","机械工程系","工业工程系","车辆工程系"],
 	];
 //var countires=[[["龙湖区","新郑区"],["金明区","南关区"],["老城","洛龙"],["商水","周口"]],[["迎泽区","万柏林区","小店区","杏花岭区"],["城区","矿区"],["南边区","小北沟"]],[["莱山区","福山区","芝罘区"],["市南","市北"],["市中区","天桥区"],["文登市","乳山市"]]];
 $(function(){
     for(var i=0;i<xueyuan.length;i++){
-    $("#SD").append("<option "+"value="+xueyuan[i]+">"+xueyuan[i]+"</option>");
+    	
+    		$("#SD").append("<option "+"value="+xueyuan[i]+">"+xueyuan[i]+"</option>");
+    	
     }
     $("#SD").change(function(){
         $("#SZ").children().not(":eq(0)").remove();
         num1=$(this).children("option:selected").index();
         var acity1=zhuanye[num1-1];
         for(var j=0;j<acity1.length;j++){
-        $("#SZ").append("<option "+"value="+acity1[j]+">"+acity1[j]+"</option>");
+        	
+        		$("#SZ").append("<option "+"value="+acity1[j]+">"+acity1[j]+"</option>");
+        	
         }
     /*$("#SZ").change(function(){
         $("#SC").children().not(":eq(0)").remove();
