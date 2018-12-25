@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@page import="Bean.StudentBean" %>
 <%
-String path = request.getContextPath();
+	String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -14,10 +14,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script type="text/javascript" src = "js/xuanze.js"></script>
     </head>
     <body> 
-    <% 
-    request.setCharacterEncoding("UTF-8");
-    StudentBean user=(StudentBean)request.getAttribute("user");
-    %>
+    <%
+     	request.setCharacterEncoding("UTF-8");
+         StudentBean user=(StudentBean)request.getAttribute("user");
+     %>
         <div id = "body-box"> 
             <div id = "body-info">  
                 <ul>

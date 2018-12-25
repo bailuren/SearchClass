@@ -43,7 +43,4 @@ public class SCBean {
 	public void setGrade(String grade) {
 		Grade = grade;
 	}
-	
-	
-	
 }

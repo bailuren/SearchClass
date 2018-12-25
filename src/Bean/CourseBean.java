@@ -1,11 +1,11 @@
 package Bean;
 
 public class CourseBean {
-    private int Cno;
-    private String Cname;
-    private int Tno; 
-    private String Tname;
-    private int Ccredit;
+    private int Cno;//课程编号
+    private String Cname;//课程名称
+    private int Tno; //任课老师编号
+    private String Tname;//任课老师姓名
+    private int Ccredit;//课程学分
     
     public int getCno() {
         return Cno;

@@ -35,15 +35,15 @@ public class StudentLoginServlet extends HttpServlet {
         luser.setSno(request.getParameter("Sno"));
         luser.setSpsw(request.getParameter("Spsw"));
         StudentDao udao=new StudentDao();
-          if(udao.isRegUser(luser)){
+        if((request.getParameter("Sno").equals("admin")) && (request.getParameter("Spsw").equals("123456"))){
+            request.getSession().setAttribute("name", request.getParameter("Sno"));
+            response.sendRedirect("index.jsp");     
+        }else if(udao.isRegUser(luser)){
               StudentBean user=udao.findByNum(luser.getSno());
               request.getSession().setAttribute("number", luser.getSno());                 
               request.getSession().setAttribute("id", user.getSid());
               request.getSession().setAttribute("name", user.getSname());
               response.sendRedirect("HomeIndex.jsp");     
-          }else if((request.getParameter("Sno").equals("admin")) && (request.getParameter("Spsw").equals("123456"))){
-              request.getSession().setAttribute("name", request.getParameter("Sno"));
-              response.sendRedirect("index.jsp");     
           }else{
                  String message="µÇÂ½Ê§°Ü";
                  request.setAttribute("message", message);

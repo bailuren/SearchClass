@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="css/add.css" />
 </head>
 <body>
-    <% 
-    request.setCharacterEncoding("UTF-8");
-    StudentBean user=(StudentBean)request.getAttribute("user");
+    <%
+    	request.setCharacterEncoding("UTF-8");
+    	StudentBean user=(StudentBean)request.getAttribute("user");
     %>
         <div id = "body-box"> 
             <div id = "body-info">  

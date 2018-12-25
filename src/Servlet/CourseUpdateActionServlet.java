@@ -33,8 +33,8 @@ public class CourseUpdateActionServlet extends HttpServlet {
 	    PrintWriter Out =response.getWriter();
         request.setCharacterEncoding("UTF-8");
         CourseBean user=new CourseBean();
-        String cname = new String(request.getParameter("Cname").getBytes("ISO-8859-1"),"utf-8");
-        String tname = new String(request.getParameter("Tname").getBytes("ISO-8859-1"),"utf-8");
+        String cname = request.getParameter("Cname");
+        String tname = request.getParameter("Tname");
         user.setCno(Integer.parseInt(request.getParameter("Cno")));
 	    user.setCname(cname);
 	    user.setTno(Integer.parseInt(request.getParameter("Tno")));

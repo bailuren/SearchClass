@@ -26,7 +26,7 @@
   <th align="center" bordercolor="#0053b9" style = "color:green">操作</th>
   </tr>
 <%
-     request.setCharacterEncoding("UTF-8");
+	request.setCharacterEncoding("UTF-8");
      PageBean pb=(PageBean)request.getAttribute("pb");
      List<StudentBean> list=pb.getUser();
      if(list==null||list.size()<0)
@@ -34,7 +34,8 @@
         out.print("数据为空");
         }else{
         for(StudentBean user:list)
-        {    %>
+        {
+%>
      <tr>
         <td><%=user.getSno()%></td>
         <td><%=user.getSname()%></td>

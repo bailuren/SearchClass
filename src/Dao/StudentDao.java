@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,7 @@ public class StudentDao {
     private Connection conn=null;
     private PreparedStatement ps=null;
     private ResultSet rs=null;
+    Statement st=null;
     public StudentDao(){
         conn=DBConn.getConnection();
     }
@@ -68,7 +70,7 @@ public class StudentDao {
       boolean flag=false;
       String sql="insert into students (Sno,Spsw,Sname,Sbirth,Szhuanye,Sdept,Ssex) values(?,?,?,?,?,?,?)";
       try {
-        ps=conn.prepareStatement(sql);
+    	  ps=conn.prepareStatement(sql);
           ps.setString(1,user.getSno());
           ps.setString(2,user.getSpsw());
           ps.setString(3,user.getSname());
@@ -198,13 +200,10 @@ public class StudentDao {
 
 public List<SCBean> findByPage2(String skey){
     List<SCBean> list=new ArrayList<SCBean>();
-      String sql="select * from users where  Sno like %?% or Cno like %?% or Sname like %?%";
+      String sql="select * from sc where  Sno like '%"+skey+"%' or Cno like '%"+skey+"%' or Sname like '%"+skey+"%'";
       try {
-        ps=conn.prepareStatement(sql);
-        ps.setString(1,skey);
-        ps.setString(2,skey);
-        ps.setString(3,skey);
-        rs=ps.executeQuery();
+        st=conn.createStatement();
+        rs=st.executeQuery(sql);
         while(rs.next()){
             SCBean user=new SCBean();
             user.setSno(rs.getString("Sno"));
